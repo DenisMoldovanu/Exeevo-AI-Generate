@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Global typography styles */
+  h1 {
+    @apply text-hero-mobile md:text-hero-desktop font-medium text-text-primary text-center;
+  }
+  
+  h2 {
+    @apply text-hero-mobile md:text-hero-desktop font-medium text-text-primary text-center;
+  }
+  
+  p {
+    @apply text-subtitle-mobile md:text-subtitle-desktop font-normal text-text-primary text-center;
+  }
+  
+  /* Hero section specific typography */
+  .hero h1 {
+    @apply text-hero-mobile md:text-hero-desktop font-medium text-text-primary text-center;
+  }
+  
+  .hero p {
+    @apply text-subtitle-mobile md:text-subtitle-desktop font-normal text-text-primary text-center;
+  }
+  
+  /* Button styles */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-2 h-12 border-2 border-text-primary rounded-100 text-button font-semibold text-text-primary transition-all duration-200 hover:bg-text-primary hover:text-white;
+  }
+  
+  /* Microsoft text */
+  .microsoft-text {
+    @apply text-microsoft-text font-semibold text-text-primary;
+  }
+}
+
+@layer components {
+  /* Hero Content Layout */
+  .hero-content {
+    @apply relative z-10;
+  }
+}
+

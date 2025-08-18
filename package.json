@@ -1,0 +1,19 @@
+{
+  "name": "exeevo-site",
+  "version": "1.0.0",
+  "description": "Exeevo - Transform Life Sciences with Connected, Compliant Solutions",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["life-sciences", "healthcare", "microsoft", "exeevo"],
+  "author": "Exeevo",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.16"
+  }
+}

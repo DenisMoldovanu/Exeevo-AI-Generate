@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exeevo - Transform Life Sciences</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI Variable', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Hero Section - Single Responsive Layout -->
+    <section class="hero relative overflow-hidden">
+        <div class="container mx-auto">
+            <!-- Desktop Layout -->
+            <div class="hidden md:block">
+                <!-- Content Section -->
+                <div class="hero-content text-center px-6 py-24">
+                    <div class="max-w-4xl mx-auto space-y-12">
+                        <h1 class="text-hero-desktop font-medium text-text-primary">
+                            Transform life sciences<br>with connected, compliant solutions
+                        </h1>
+                        <p class="text-subtitle-desktop font-normal text-text-primary">
+                            Unify your digital ecosystem with a platform built on Microsoft.
+                        </p>
+                        <button class="btn-secondary">Explore solutions</button>
+                    </div>
+                </div>
+
+                <!-- Desktop Hero Image -->
+                <div class="mt-12">
+                    <img src="./src/images/hero-desktop.jpg" alt="Exeevo Platform Mockup" class="w-full max-w-7xl mx-auto">
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="md:hidden relative">
+                <!-- Mobile Hero Image with Overlay -->
+                <div class="relative">
+                    <img src="./src/images/hero-mobile-c6b42e.jpg" alt="Exeevo Platform Mockup" class="w-full h-auto">
+                    
+                    <!-- Gradient Overlays for Mobile -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent"></div>
+                </div>
+
+                <!-- Mobile Content Overlay -->
+                <div class="absolute inset-0 flex flex-col items-center justify-start px-6 pt-12">
+                    <div class="max-w-4xl mx-auto space-y-12 text-center">
+                        <h1 class="text-hero-mobile font-medium text-text-primary">
+                            Transform<br>life sciences<br>with connected, compliant solutions
+                        </h1>
+                        <p class="text-subtitle-mobile font-normal text-text-primary">
+                            Unify your digital ecosystem with a platform built on Microsoft.
+                        </p>
+                        <button class="btn-secondary">Explore solutions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Mockup Image (Mobile Only) -->
+            <div class="md:hidden relative mt-8">
+                <img src="./src/images/mockup-mobile-61889a.jpg" alt="Mobile Platform Mockup" class="w-full h-auto">
+            </div>
+
+            <!-- Microsoft Badge (Mobile Only) -->
+            <div class="md:hidden flex items-center justify-center gap-4 mt-8 mb-12">
+                <div class="bg-white rounded-lg p-3 w-12 h-12 flex items-center justify-center">
+                    <img src="./src/images/microsoft-logo.png" alt="Microsoft Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-white rounded-lg p-3 w-12 h-12 flex items-center justify-center">
+                    <img src="./src/images/microsoft-icon.png" alt="Microsoft Icon" class="w-6 h-8 object-cover">
+                </div>
+                <span class="microsoft-text">Built on<br>Microsoft</span>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
