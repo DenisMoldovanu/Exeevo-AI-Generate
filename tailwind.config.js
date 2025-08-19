@@ -12,10 +12,6 @@ export default {
                 "text-muted": "#A3A3A3",
                 "brand-primary": "#FF5733",
                 "white": "#FFFFFF",
-
-                // Background Colors
-                "bg-white": "#FFFFFF",
-
                 // Border Colors
                 "border-primary": "#333F48",
                 "border-text-primary": "#333F48",
