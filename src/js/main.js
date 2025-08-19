@@ -120,6 +120,103 @@ document.addEventListener('DOMContentLoaded', function () {
             bullet.classList.toggle('bg-gray-300', index !== this.realIndex);
         });
     });
+
+    // Resources Swiper functionality
+    const resourcesSwiper = new Swiper('.resources-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: false,
+        autoplay: false,
+        speed: 300,
+        effect: 'slide',
+        
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // Pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + ' w-2 h-2 bg-gray-300 rounded-full"></span>';
+            },
+        },
+
+        // Update counter
+        on: {
+            slideChange: function () {
+                const counter = document.querySelector('.resources-swiper .swiper-counter');
+                if (counter) {
+                    counter.textContent = `${this.realIndex + 1} / ${this.slides.length}`;
+                }
+
+                // Update navigation button opacity
+                const prevButton = document.querySelector('.resources-swiper .swiper-button-prev');
+                const nextButton = document.querySelector('.resources-swiper .swiper-button-next');
+
+                if (this.isBeginning) {
+                    prevButton.classList.add('opacity-30');
+                    prevButton.classList.remove('hover:opacity-100');
+                } else {
+                    prevButton.classList.remove('opacity-30');
+                    prevButton.classList.add('hover:opacity-100');
+                }
+
+                if (this.isEnd) {
+                    nextButton.classList.add('opacity-30');
+                    nextButton.classList.remove('hover:opacity-100');
+                } else {
+                    nextButton.classList.remove('opacity-30');
+                    nextButton.classList.add('hover:opacity-100');
+                }
+            },
+            init: function () {
+                // Initial update of counter and button opacity
+                const counter = document.querySelector('.resources-swiper .swiper-counter');
+                if (counter) {
+                    counter.textContent = `${this.realIndex + 1} / ${this.slides.length}`;
+                }
+
+                const prevButton = document.querySelector('.resources-swiper .swiper-button-prev');
+                const nextButton = document.querySelector('.resources-swiper .swiper-button-next');
+
+                if (this.isBeginning) {
+                    prevButton.classList.add('opacity-30');
+                    prevButton.classList.remove('hover:opacity-100');
+                } else {
+                    prevButton.classList.remove('opacity-30');
+                    prevButton.classList.add('hover:opacity-100');
+                }
+
+                if (this.isEnd) {
+                    nextButton.classList.add('opacity-30');
+                    nextButton.classList.remove('hover:opacity-100');
+                } else {
+                    nextButton.classList.remove('opacity-30');
+                    nextButton.classList.add('hover:opacity-100');
+                }
+            }
+        },
+    });
+
+    // Resources pagination styling
+    const resourcesPaginationBullets = document.querySelectorAll('.resources-swiper .swiper-pagination-bullet');
+    resourcesPaginationBullets.forEach((bullet, index) => {
+        if (index === 0) {
+            bullet.classList.add('bg-text-primary');
+        }
+    });
+
+    // Update resources pagination on slide change
+    resourcesSwiper.on('slideChange', function () {
+        resourcesPaginationBullets.forEach((bullet, index) => {
+            bullet.classList.toggle('bg-text-primary', index === this.realIndex);
+            bullet.classList.toggle('bg-gray-300', index !== this.realIndex);
+        });
+    });
 });
 
 
