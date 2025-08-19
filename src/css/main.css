@@ -34,6 +34,15 @@
   .microsoft-text {
     @apply text-microsoft-text font-semibold text-text-primary;
   }
+  
+  /* Advantages section typography */
+  .advantages h3 {
+    @apply text-2xl lg:text-2xl font-semibold text-text-primary leading-[1.2] tracking-[-0.02em];
+  }
+  
+  .advantages p {
+    @apply text-sm lg:text-base font-normal text-text-primary leading-[1.5];
+  }
 }
 
 @layer components {
