@@ -81,5 +81,10 @@
   .swiper-button-next.swiper-button-disabled {
     @apply opacity-30 cursor-not-allowed;
   }
+
+  /* Demo Request Section Gradient Background */
+  .bg-gradient-radial {
+    background: radial-gradient(circle at -52% 23%, rgba(223, 25, 149, 1) 0%, rgba(7, 98, 200, 1) 50%, rgba(0, 195, 137, 1) 100%);
+  }
 }
 
