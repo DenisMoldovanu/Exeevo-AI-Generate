@@ -30,11 +30,6 @@
     @apply text-subtitle-mobile md:text-subtitle-desktop font-normal text-text-primary text-center;
   }
 
-  /* Button styles */
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-2 h-12 border-2 border-text-primary rounded-100 text-button font-semibold text-text-primary transition-all duration-200 hover:bg-text-primary hover:text-white;
-  }
-
   /* Microsoft text */
   .microsoft-text {
     @apply text-microsoft-text font-semibold text-text-primary;

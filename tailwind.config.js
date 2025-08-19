@@ -65,22 +65,7 @@ export default {
                     xl: "1312px",
                 },
             },
-            spacing: {
-                "8": "8px",
-                "12": "48px",
-                "24": "24px",
-                "32": "32px",
-                "41": "41px",
-                "48": "48px",
-                "96": "96px",
-            },
-            borderRadius: {
-                "8": "8px",
-                "100": "100px",
-            },
-            borderWidth: {
-                "2": "2px",
-            },
+
             backgroundImage: {
                 "gradient-built": "url('./src/images/gradient.png)",
             },
