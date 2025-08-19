@@ -61,6 +61,65 @@ document.addEventListener('DOMContentLoaded', function () {
             // Add your button functionality here
         });
     }
+
+    // Case Studies Swiper functionality
+    const caseStudiesSwiper = new Swiper('.case-studies-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: false,
+        autoplay: false,
+        speed: 300,
+        effect: 'slide',
+        
+        // Responsive breakpoints
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+            }
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // Pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + ' w-2 h-2 bg-gray-300 rounded-full"></span>';
+            },
+        },
+
+        // Update counter
+        on: {
+            slideChange: function () {
+                const counter = document.querySelector('.swiper-counter');
+                if (counter) {
+                    counter.textContent = `${this.realIndex + 1} / ${this.slides.length}`;
+                }
+            },
+        },
+    });
+
+    // Custom pagination styling
+    const paginationBullets = document.querySelectorAll('.swiper-pagination-bullet');
+    paginationBullets.forEach((bullet, index) => {
+        if (index === 0) {
+            bullet.classList.add('bg-text-primary');
+        }
+    });
+
+    // Update pagination on slide change
+    caseStudiesSwiper.on('slideChange', function () {
+        paginationBullets.forEach((bullet, index) => {
+            bullet.classList.toggle('bg-text-primary', index === this.realIndex);
+            bullet.classList.toggle('bg-gray-300', index !== this.realIndex);
+        });
+    });
 });
 
 
