@@ -41,5 +41,15 @@
   .hero-content {
     @apply relative z-10;
   }
+  
+  /* Navigation styles */
+  .navigation {
+    @apply shadow-sm;
+  }
+  
+  /* Mobile menu transition */
+  #mobile-menu {
+    @apply transition-all duration-300 ease-in-out;
+  }
 }
 
