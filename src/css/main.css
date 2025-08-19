@@ -3,61 +3,67 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Global typography styles */
+  body {
+    font-family: 'Segoe UI Variable', 'Inter', sans-serif;
+  }
+
   h1 {
     @apply text-hero-mobile md:text-hero-desktop font-medium text-text-primary text-center;
   }
-  
+
   h2 {
     @apply text-hero-mobile md:text-hero-desktop font-medium text-text-primary text-center;
   }
-  
+
   p {
     @apply text-subtitle-mobile md:text-subtitle-desktop font-normal text-text-primary text-center;
   }
-  
+
   /* Hero section specific typography */
   .hero h1 {
     @apply text-hero-mobile md:text-hero-desktop font-medium text-text-primary text-center;
   }
-  
+
   .hero p {
     @apply text-subtitle-mobile md:text-subtitle-desktop font-normal text-text-primary text-center;
   }
-  
+
   /* Button styles */
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-2 h-12 border-2 border-text-primary rounded-100 text-button font-semibold text-text-primary transition-all duration-200 hover:bg-text-primary hover:text-white;
   }
-  
+
   /* Microsoft text */
   .microsoft-text {
     @apply text-microsoft-text font-semibold text-text-primary;
   }
-  
+
   /* Advantages section typography */
   .advantages h3 {
     @apply text-2xl lg:text-2xl font-semibold text-text-primary leading-[1.2] tracking-[-0.02em];
   }
-  
+
   .advantages p {
     @apply text-sm lg:text-base font-normal text-text-primary leading-[1.5];
   }
-  
+
 
 }
 
 @layer components {
+
   /* Hero Content Layout */
   .hero-content {
     @apply relative z-10;
   }
-  
+
   /* Navigation styles */
   .navigation {
     @apply shadow-sm;
   }
-  
+
   /* Mobile menu transition */
   #mobile-menu {
     @apply transition-all duration-300 ease-in-out;
@@ -87,4 +93,3 @@
     background: radial-gradient(circle at -52% 23%, rgba(223, 25, 149, 1) 0%, rgba(7, 98, 200, 1) 50%, rgba(0, 195, 137, 1) 100%);
   }
 }
-

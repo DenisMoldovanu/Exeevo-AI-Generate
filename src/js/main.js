@@ -17,51 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Tab functionality
-    const tabButtons = document.querySelectorAll('[data-tab]');
-    const tabPanels = document.querySelectorAll('[id$="-solutions"], [id$="-architecture"], [id$="-innovation"], [id$="-affairs"], [id$="-operations"]');
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const targetTab = this.getAttribute('data-tab');
-
-            // Remove active class from all buttons and panels
-            tabButtons.forEach(btn => {
-                btn.classList.remove('active');
-                btn.classList.add('opacity-50');
-                const indicator = btn.querySelector('div');
-                if (indicator) indicator.classList.remove('opacity-100');
-            });
-            tabPanels.forEach(panel => {
-                panel.classList.remove('block');
-                panel.classList.add('hidden');
-            });
-
-            // Add active class to clicked button and target panel
-            this.classList.remove('opacity-50');
-            this.classList.add('active');
-            const indicator = this.querySelector('div');
-            if (indicator) indicator.classList.add('opacity-100');
-
-            const targetPanel = document.getElementById(targetTab);
-            if (targetPanel) {
-                targetPanel.classList.remove('hidden');
-                targetPanel.classList.add('block');
-            }
-        });
-    });
-
-    // Add any interactive functionality here
-
-    // Example: Button click handler
-    const exploreButton = document.querySelector('.btn-secondary');
-    if (exploreButton) {
-        exploreButton.addEventListener('click', function () {
-            console.log('Explore solutions button clicked');
-            // Add your button functionality here
-        });
-    }
-
     // Case Studies Swiper functionality
     const caseStudiesSwiper = new Swiper('.case-studies-swiper', {
         slidesPerView: 1,
@@ -70,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: false,
         speed: 300,
         effect: 'slide',
-        
+
         // Responsive breakpoints
         breakpoints: {
             1024: {
@@ -129,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: false,
         speed: 300,
         effect: 'slide',
-        
+
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
@@ -220,3 +175,57 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Tabs Functionality
+// Tab functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const tabButtons = document.querySelectorAll("[data-tab]");
+    const tabPanels = document.querySelectorAll(
+        "[id$='-solutions'], [id$='-architecture'], [id$='-innovation'], [id$='-affairs'], [id$='-operations']"
+    );
+
+    function activateTab(targetId) {
+        // Reset all buttons
+        tabButtons.forEach((btn) => {
+            btn.classList.remove("active", "text-gray-900");
+            btn.classList.add("opacity-50", "text-text-primary");
+
+            const indicator = btn.querySelector("div");
+            if (indicator) indicator.classList.replace("opacity-100", "opacity-0");
+        });
+
+        // Reset all panels
+        tabPanels.forEach((panel) => {
+            panel.classList.add("hidden");
+            panel.classList.remove("block");
+        });
+
+        // Activate selected button
+        const activeButton = document.querySelector(`[data-tab="${targetId}"]`);
+        if (activeButton) {
+            activeButton.classList.remove("opacity-50");
+            activeButton.classList.add("active", "text-gray-900");
+
+            const indicator = activeButton.querySelector("div");
+            if (indicator) indicator.classList.replace("opacity-0", "opacity-100");
+        }
+
+        // Show active panel
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+            targetPanel.classList.remove("hidden");
+            targetPanel.classList.add("block");
+        }
+    }
+
+    // Attach event listeners
+    tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            activateTab(btn.dataset.tab);
+        });
+    });
+
+    // Activate first tab by default
+    if (tabButtons.length > 0) {
+        activateTab(tabButtons[0].dataset.tab);
+    }
+});
