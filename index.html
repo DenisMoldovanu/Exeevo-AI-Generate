@@ -399,6 +399,275 @@
             </div>
         </section>
 
+        <!-- Solutions Section with Tabs -->
+        <section class="solutions bg-white py-12 lg:py-32">
+            <div class="container mx-auto">
+                <!-- Section Header -->
+                <div class="text-center px-6 mb-12 lg:mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em] mb-12 lg:mb-12">
+                        Solutions for every function
+                    </h2>
+                    
+                    <!-- Tabs Navigation -->
+                    <div class="flex flex-wrap justify-center gap-6 lg:gap-8 mb-12 lg:mb-16">
+                        <button class="flex flex-col items-center gap-4 px-6 py-3 text-text-primary font-semibold text-xl leading-[1.33] tracking-[-0.01em] transition-all duration-200 hover:text-gray-600 active" data-tab="all-solutions">
+                            <span class="whitespace-nowrap">All solutions</span>
+                            <div class="w-full h-1 bg-gradient-to-r from-pink-500 via-blue-500 to-green-400 rounded-full opacity-100 transition-opacity duration-200"></div>
+                        </button>
+                        <button class="flex flex-col items-center gap-4 px-6 py-3 text-text-primary font-semibold text-xl leading-[1.33] tracking-[-0.01em] transition-all duration-200 hover:text-gray-600 opacity-50" data-tab="it-architecture">
+                            <span class="whitespace-nowrap">IT and Architecture</span>
+                            <div class="w-full h-1 bg-gradient-to-r from-pink-500 via-blue-500 to-green-400 rounded-full opacity-0 transition-opacity duration-200"></div>
+                        </button>
+                        <button class="flex flex-col items-center gap-4 px-6 py-3 text-text-primary font-semibold text-xl leading-[1.33] tracking-[-0.01em] transition-all duration-200 hover:text-gray-600 opacity-50" data-tab="strategy-innovation">
+                            <span class="whitespace-nowrap">Strategy and Innovation</span>
+                            <div class="w-full h-1 bg-gradient-to-r from-pink-500 via-blue-500 to-green-400 rounded-full opacity-0 transition-opacity duration-200"></div>
+                        </button>
+                        <button class="flex flex-col items-center gap-4 px-6 py-3 text-text-primary font-semibold text-xl leading-[1.33] tracking-[-0.01em] transition-all duration-200 hover:text-gray-600 opacity-50" data-tab="medical-affairs">
+                            <span class="whitespace-nowrap">Medical Affairs</span>
+                            <div class="w-full h-1 bg-gradient-to-r from-pink-500 via-blue-500 to-green-400 rounded-full opacity-0 transition-opacity duration-200"></div>
+                        </button>
+                        <button class="flex flex-col items-center gap-4 px-6 py-3 text-text-primary font-semibold text-xl leading-[1.33] tracking-[-0.01em] transition-all duration-200 hover:text-gray-600 opacity-50" data-tab="commercial-operations">
+                            <span class="whitespace-nowrap">Commercial Operations</span>
+                            <div class="w-full h-1 bg-gradient-to-r from-pink-500 via-blue-500 to-green-400 rounded-full opacity-0 transition-opacity duration-200"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="px-6">
+                    <!-- All Solutions Tab -->
+                    <div class="transition-all duration-300 ease-in-out block" id="all-solutions">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                            <!-- IT and Architecture Card -->
+                            <div class="solution-card bg-gradient-to-br from-pink-50 to-purple-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/database-icon.svg" alt="Database Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-pink-600">IT and Architecture</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Reduce the complexity of integration
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            R&D, regulatory, and commercial systems.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore IT solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-pink-200 to-purple-200 rounded-xl"></div>
+                                </div>
+                            </div>
+
+                            <!-- Strategy and Innovation Card -->
+                            <div class="solution-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/lightbulb-icon.svg" alt="Lightbulb Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-blue-600">Strategy and Innovation</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Connect digital initiatives at scale
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            Unify siloed digital initiatives into one scalable platform.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore digital solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-xl"></div>
+                                </div>
+                            </div>
+
+                            <!-- Medical Affairs Card -->
+                            <div class="solution-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/stethoscope-icon.svg" alt="Stethoscope Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-green-600">Medical Affairs</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Power compliant scientific engagement
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            Enable compliant, scientific engagement with KOLs.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore medical solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-green-200 to-emerald-200 rounded-xl"></div>
+                                </div>
+                            </div>
+
+                            <!-- Commercial Operations Card -->
+                            <div class="solution-card bg-gradient-to-br from-orange-50 to-yellow-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/chart-line-up-icon.svg" alt="Chart Line Up Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-orange-600">Commercial Operations</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Drive smarter, faster field performance
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            Boost field force performance with intelligent insights.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore commercial solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Individual Tab Panels (initially hidden) -->
+                    <div class="transition-all duration-300 ease-in-out hidden" id="it-architecture">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                            <!-- IT and Architecture Card (same as above) -->
+                            <div class="solution-card bg-gradient-to-br from-pink-50 to-purple-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/database-icon.svg" alt="Database Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-pink-600">IT and Architecture</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Reduce the complexity of integration
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            R&D, regulatory, and commercial systems.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore IT solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-pink-200 to-purple-200 rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-300 ease-in-out hidden" id="strategy-innovation">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                            <!-- Strategy and Innovation Card (same as above) -->
+                            <div class="solution-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/lightbulb-icon.svg" alt="Lightbulb Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-blue-600">Strategy and Innovation</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Connect digital initiatives at scale
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            Unify siloed digital initiatives into one scalable platform.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore digital solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-300 ease-in-out hidden" id="medical-affairs">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                            <!-- Medical Affairs Card (same as above) -->
+                            <div class="solution-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/stethoscope-icon.svg" alt="Stethoscope Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-green-600">Medical Affairs</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Power compliant scientific engagement
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            Enable compliant, scientific engagement with KOLs.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore medical solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-green-200 to-emerald-200 rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-300 ease-in-out hidden" id="commercial-operations">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                            <!-- Commercial Operations Card (same as above) -->
+                            <div class="solution-card bg-gradient-to-br from-orange-50 to-yellow-100 rounded-2xl p-6 lg:p-12">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <img src="./src/images/solutions/chart-line-up-icon.svg" alt="Chart Line Up Icon" class="w-8 h-8">
+                                        </div>
+                                        <span class="text-base font-bold text-orange-600">Commercial Operations</span>
+                                    </div>
+                                    <div class="space-y-6">
+                                        <h3 class="text-2xl lg:text-3xl font-medium text-text-primary leading-[1.2] tracking-[-0.018em]">
+                                            Drive smarter, faster field performance
+                                        </h3>
+                                        <p class="text-lg lg:text-xl font-normal text-text-primary leading-[1.33] tracking-[-0.01em]">
+                                            Boost field force performance with intelligent insights.
+                                        </p>
+                                        <button class="inline-flex items-center justify-center gap-2 px-6 py-3 h-12 bg-text-primary text-white font-semibold text-base leading-[1.33] tracking-[-0.01em] rounded-full hover:bg-gray-700 transition-colors">
+                                            Explore commercial solutions
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-8 lg:mt-12">
+                                    <div class="w-full h-64 lg:h-80 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <script type="module" src="./src/js/main.js"></script>
     </body>
 </html>
