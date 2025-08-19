@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        "./*.html",                    
-        "./src/**/*.{js,ts,jsx,tsx,html,css}",  
+        "./*.html",
+        "./src/**/*.{js,ts,jsx,tsx,html,css}",
     ],
     theme: {
         extend: {
@@ -12,10 +12,10 @@ export default {
                 "text-muted": "#A3A3A3",
                 "brand-primary": "#FF5733",
                 "white": "#FFFFFF",
-                
+
                 // Background Colors
                 "bg-white": "#FFFFFF",
-                
+
                 // Border Colors
                 "border-primary": "#333F48",
                 "border-text-primary": "#333F48",
@@ -27,33 +27,33 @@ export default {
             },
             fontSize: {
                 // Custom typography scale based on Exeevo Figma specifications
-                "hero-desktop": ["62px", { 
-                    lineHeight: "1.2em", 
+                "hero-desktop": ["62px", {
+                    lineHeight: "1.2em",
                     letterSpacing: "-0.02em",
                     fontWeight: "500"
                 }],
-                "hero-mobile": ["48px", { 
-                    lineHeight: "1.2em", 
+                "hero-mobile": ["48px", {
+                    lineHeight: "1.2em",
                     letterSpacing: "-0.02em",
                     fontWeight: "500"
                 }],
-                "subtitle-desktop": ["20px", { 
-                    lineHeight: "1.33em", 
+                "subtitle-desktop": ["20px", {
+                    lineHeight: "1.33em",
                     letterSpacing: "-0.01em",
                     fontWeight: "400"
                 }],
-                "subtitle-mobile": ["18px", { 
-                    lineHeight: "1.33em", 
+                "subtitle-mobile": ["18px", {
+                    lineHeight: "1.33em",
                     letterSpacing: "-0.01em",
                     fontWeight: "400"
                 }],
-                "button": ["16px", { 
-                    lineHeight: "1.33em", 
+                "button": ["16px", {
+                    lineHeight: "1.33em",
                     letterSpacing: "-0.01em",
                     fontWeight: "600"
                 }],
-                "microsoft-text": ["16px", { 
-                    lineHeight: "1.33em", 
+                "microsoft-text": ["16px", {
+                    lineHeight: "1.33em",
                     letterSpacing: "-0.01em",
                     fontWeight: "600"
                 }],
@@ -80,6 +80,9 @@ export default {
             },
             borderWidth: {
                 "2": "2px",
+            },
+            backgroundImage: {
+                "gradient-built": "url('./src/images/gradient.png)",
             },
         },
     },
