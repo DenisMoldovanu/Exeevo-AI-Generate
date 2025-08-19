@@ -1,0 +1,232 @@
+---
+alwaysApply: true
+---
+# Cursor Guidelines for Tailwind-Based Figma to Code Workflow
+
+These are the mandatory rules for working with **Tailwind CSS**, **Figma**, and **Cursor AI**. Follow them strictly to ensure consistency, scalability, and clean, CMS-friendly HTML.
+
+---
+
+## ✅ Single Responsive Layout
+
+- Do **not** create separate desktop and mobile layouts.
+- Use Tailwind breakpoints (`sm`, `md`, `lg`, `xl`, `2xl`) to build one unified responsive layout.
+- Avoid duplicated sections for different screen sizes unless absolutely necessary. If in doubt, consult with the team lead.
+
+---
+
+## ✅ Tailwind CSS Setup & Standards
+
+### 1. Install Tailwind via NPM
+
+- **Do not** use CDN.
+- Install with:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
+
+- Configure Tailwind using PostCSS.
+
+---
+
+### 2. Tailwind Container
+
+- Detect the container width from the Figma layout.
+- Confirm with the team lead before proceeding.
+- Use Tailwind’s `container` class and configure it globally:
+
+```js
+theme: {
+  container: {
+    center: true,
+    padding: '1rem',
+    screens: {
+      xl: '1088px',
+    },
+  },
+}
+```
+
+---
+
+### 3. Color Tokens Only
+
+- Extract all colors from the Figma file.
+- Define named color tokens in `tailwind.config.js`.
+- **Do not** use raw hex codes in the HTML.
+
+```js
+colors: {
+  'brand-primary': '#FF5733',
+  'text-muted': '#A3A3A3',
+}
+```
+
+---
+
+### 4. Font Configuration
+
+- Identify all fonts used in the Figma design.
+- Request font files from the team lead.
+- Use readable names like `font-aeonik`, not `font-['Aeonik_Pro']`.
+
+```js
+fontFamily: {
+  sans: ['Aeonik Pro', 'sans-serif'],
+  din: ['DIN 2014', 'sans-serif'],
+}
+```
+
+- The primary font must be set globally.
+- Font classes can only be used in SCSS `@layer base` — **not in HTML**.
+
+---
+
+## ✅ Tailwind Usage in HTML Only
+
+- All Tailwind classes (layout, spacing, color, interaction) must be used directly in **HTML**.
+- **Do not** use Tailwind classes inside SCSS.
+- SCSS is reserved only for base typography styles.
+
+---
+
+## ✅ Grid-First Layout
+
+- Always prioritize **Tailwind’s Grid** system over Flexbox for layout.
+- Use utilities like `grid`, `grid-cols-*`, `gap-*`, `place-items-*`, `justify-items-*`, etc.
+- Use `flex` only when grid is not practical (e.g., inline alignments, icon/button layouts).
+
+---
+
+## ✅ Typography via `@layer base`
+
+- Do **not** add Tailwind classes to content tags: `p`, `h1–h6`, `ul`, `ol`, `strong`, `a`, `span`.
+- Use Tailwind’s `@layer base` to define global styles for those tags:
+
+```scss
+@layer base {
+  h1 {
+    @apply text-4xl font-bold leading-tight;
+  }
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+```
+
+- Section-specific typography can also go in `@layer base`:
+
+```scss
+@layer base {
+  .section-hero h1 {
+    @apply font-aeonik font-medium text-white;
+    font-size: 40px;
+    line-height: 1;
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+    }
+  }
+}
+```
+
+---
+
+## ✅ Images & Media
+
+### Images
+
+- Always wrap images in a `<picture>` tag.
+- For mobile-specific images, use `<source media="...">`.
+
+```html
+<picture>
+  <source media="(max-width: 768px)" srcset="/images/mobile.jpg" />
+  <img src="/images/desktop.jpg" alt="Example" />
+</picture>
+```
+
+- **Do not** use inline `style="background-image:..."`.
+- Use Tailwind utilities in HTML (`bg-[url(...)]`) or `<picture>` for backgrounds.
+
+---
+
+### Videos
+
+- If the design includes videos, ask the team lead:
+  - Should it use a `<video>` tag?
+  - YouTube/iframe embed?
+  - Custom player?
+
+---
+
+## ✅ JavaScript Usage
+
+- Only use **vanilla JavaScript**.
+- External libraries must be approved beforehand.
+- All JS must be in **external files** — no inline `<script>` tags.
+
+---
+
+## ✅ Structure & Architecture
+
+### Spacing
+
+- Match all padding, margins, and spacing to Figma exactly.
+- Make spacing responsive and consistent.
+
+---
+
+### Project Structure
+
+Confirm folder and file structure before coding. Example:
+
+```
+project/
+├── public/
+│   └── images/
+├── src/
+│   ├── index.html
+│   ├── js/
+│   │   └── main.js
+│   └── css/
+│       └── main.css
+├── tailwind.config.js
+└── postcss.config.js
+```
+
+---
+
+### Reusable Patterns
+
+- Repeated styles (like `h1`, `h2`, `p`) should be handled in `@layer base`.
+- Use custom Tailwind utilities only if the same pattern repeats across sections.
+
+---
+
+## ✅ Styling Priority
+
+1. Use Tailwind utility classes **directly in HTML** for layout, spacing, color, etc.
+2. Use SCSS `@layer base` only for typography and semantic content tags.
+3. Create Tailwind utilities in `tailwind.config.js` only if a pattern repeats often.
+4. Use **Grid** as the default layout tool. Use `flex` sparingly and only when necessary.
+
+---
+
+## 🔁 Project Initialization Protocol
+
+Before any code is written, Cursor must:
+
+1. Request the Figma Dev Mode link.
+2. Analyze:
+   - Color palette
+   - Fonts and hierarchy
+   - Main layout container width
+   - Text styles and reusable patterns
+3. Propose a `tailwind.config.js` file for approval.
+
+---
+
+**✅ This is the official baseline. All team members and Cursor should follow it without exception.**
